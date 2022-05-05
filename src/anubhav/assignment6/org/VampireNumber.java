@@ -3,8 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class VampireNumber {
-
-        static void test(int  startValue,  int  stopValue) {
+    static void test(int  startValue,  int  stopValue) {
             int countOfRes = 1;
             StringBuilder res = new StringBuilder();
             Outer:for (int i = startValue; i <= stopValue; i++) {

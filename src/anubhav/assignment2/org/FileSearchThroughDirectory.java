@@ -45,7 +45,7 @@ public class FileSearchThroughDirectory{
             search(directory);
         }
         else{
-            System.out.println();
+            System.out.println("Directory is not present");
         }
     }
 

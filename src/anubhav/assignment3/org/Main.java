@@ -49,13 +49,14 @@ public class Main {
         ArrayList<Integer> timeTakenForPing = new ArrayList<Integer>();
         while((s = input.readLine()) != null){
             System.out.println(s);
-            if(s.length()>0 && s.charAt(0)=='R' && s.charAt(2)=='P'){
+            if(s.length()>0){
                 int time = fetchPingTime(s);
                 timeTakenForPing.add(time);
             }
         }
         System.out.println("error (if any): ");
-        while((s = error.readLine()) != null){
+        while((s = error.readLine()) != null)
+        {
             System.out.println(s);
         }
 
