@@ -1,7 +1,7 @@
 package anubhav.assignment5.org;
 
 
-public class data {
+public class Data {
         int var1;
         char var2;
 

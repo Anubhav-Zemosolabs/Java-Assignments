@@ -3,7 +3,7 @@ package anubhav.assignment1.org;
 import java.util.Scanner;
 
 public class Assignment1 {
-    public static boolean findMissing(String str){
+    public static boolean findMissingCharacter(String str){
 
         // replace("[^a-z]","") : first eliminating all the characters except alphabet letters from the input string.
         // replaceAll("(.)(?=.*\\1)", ""): removing duplicate characters.
@@ -15,10 +15,10 @@ public class Assignment1 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str;
+        String line;
         System.out.print("Enter the input string:\t");
-        str = sc.nextLine(); //taking input from the user
-        boolean res = findMissing(str);
-        System.out.println("Is string " + str + " contain all letters present in string: " + res);
+        line = sc.nextLine(); //taking input from the user
+        boolean result = findMissingCharacter(line);
+        System.out.println("Is string " + line + " contain all letters present in string: " + result);
     }
 }

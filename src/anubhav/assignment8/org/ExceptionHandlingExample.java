@@ -1,7 +1,7 @@
 package anubhav.assignment8.org;
-public class Exceptionthrough {
+public class ExceptionHandlingExample {
 
-    public void through(int i) throws Exception1, Exception3, Exception2 {
+    public void ExceptionType(int i) throws Exception1, Exception3, Exception2 {
         if(i==1) {
             System.out.println("Exception 1 thrown");
             throw new Exception1();
