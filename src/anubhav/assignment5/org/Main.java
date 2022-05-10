@@ -2,7 +2,7 @@ package anubhav.assignment5.org;
 
 public class Main {
     public static void main(String[] args) {
-        data obj1=new data();
+        Data obj1=new Data();
         obj1.getInstanceVariables();
 
         //        obj1.printValues();
