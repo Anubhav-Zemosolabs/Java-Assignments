@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Exceptionthrough exp=new Exceptionthrough();
+        ExceptionHandlingExample exp=new ExceptionHandlingExample();
         Scanner sc=new Scanner(System.in);
-        String int_var;
+        String inputString;
         while(true)
         {
-            int_var=sc.nextLine();
-            if(is_Integer(int_var))
+            inputString = sc.nextLine();
+            if(isInteger(inputString))
                 break;
             else{
                 System.out.println("Enter a digit between 1 and 3");
             }
         }
         try{
-            exp.through(Integer.parseInt(int_var));
+            exp.ExceptionType(Integer.parseInt(inputString));
         }
         catch(Exception e)
         {
@@ -29,10 +29,11 @@ public class Main {
         }
     }
 
-    private static boolean is_Integer(String int_var) {
+    private static boolean isInteger(String input_string) {
         try {
-            Integer.parseInt(int_var);
-            if(Integer.parseInt(int_var)>3)
+            // for converting string into integer
+            Integer.parseInt(input_string);
+            if(Integer.parseInt(input_string)>3)
             {
                 return false;
             }
