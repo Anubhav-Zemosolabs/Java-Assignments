@@ -5,17 +5,18 @@ import java.util.Collections;
 public class VampireNumber {
     static void test(int  startValue,  int  stopValue) {
             int countOfRes = 1;
-            StringBuilder res = new StringBuilder();
+            StringBuilder result = new StringBuilder();
             Outer:for (int i = startValue; i <= stopValue; i++) {
                 for (int j = i; j <= stopValue; j++) {
                     if (isVampireNumber(i, j)) {
-                        res.append("").append(countOfRes).append(": = ( ").append(i).append(",").append(j).append(" = ").append(i * j).append(")").append("\n");
+                        result.append("").append(countOfRes).append(": = ( ").append(i).append(",").append(j).append(" = ").append(i * j).append(")").append("\n");
                         countOfRes++;
                         if(countOfRes>100) break Outer;
                     }
                 }
             }
-            System.out.println(res);
+
+            System.out.println(result);
         }
 
         static boolean isVampireNumber(int a, int b) {
@@ -28,7 +29,7 @@ public class VampireNumber {
         // methode to Split the numbers to Digits
 
         static String splitIntoDigits(int num, int num2) {
-                StringBuilder res = new StringBuilder();
+                StringBuilder result = new StringBuilder();
                 ArrayList<Integer> digits = new ArrayList<>();
                 while (num > 0) {
                     digits.add(num%10);
@@ -40,9 +41,9 @@ public class VampireNumber {
                 }
                 Collections.sort(digits);
                 for (int i : digits) {
-                    res.append(i);
+                    result.append(i);
                 }
-                return res.toString();
+                return result.toString();
             }
 
         public static void main(String[] args) {

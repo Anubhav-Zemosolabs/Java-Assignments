@@ -28,11 +28,12 @@ public class FileSearchThroughDirectory{
         FileSearchThroughDirectory fileSearch = new FileSearchThroughDirectory();
         fileSearch.searchDirectory(new File("/home"), "test.txt");
 
-        int count = fileSearch.getResult().size();
-        if(count ==0){
+        int fileSize = fileSearch.getResult().size();
+        //checking the file size if it is zero then it will show not found
+        if(fileSize == 0){
             System.out.println("\nNo result found!");
         }else{
-            System.out.println("\nFound " + count + " result!\n");
+            System.out.println("\nFound " + fileSize + " result!\n");
             for (String matched : fileSearch.getResult()){
                 System.out.println("Found : " + matched);
             }
@@ -53,15 +54,15 @@ public class FileSearchThroughDirectory{
         if(file.isDirectory()){
             System.out.println("Searching File ..." + file.getAbsoluteFile());
         }
-        //do you have permission to read this directory?
+        //Do you have permission to read this directory?
         if(file.canRead()){
-            for(File temp : file.listFiles()){
-                if(temp.isDirectory()){
-                    search(temp);
+            for(File name : file.listFiles()){
+                if(name.isDirectory()){
+                    search(name);
                 }
                 else{
-                    if(getFileNameToSearch().equalsIgnoreCase(temp.getName())){
-                        result.add(temp.getAbsoluteFile().toString());
+                    if(getFileNameToSearch().equalsIgnoreCase(name.getName())){
+                        result.add(name.getAbsoluteFile().toString());
                     }
                 }
             }
