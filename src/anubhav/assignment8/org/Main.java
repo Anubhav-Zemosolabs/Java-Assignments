@@ -6,18 +6,18 @@ public class Main {
     public static void main(String[] args) {
         ExceptionHandlingExample exp=new ExceptionHandlingExample();
         Scanner sc=new Scanner(System.in);
-        String input_string;
+        String inputString;
         while(true)
         {
-            input_string = sc.nextLine();
-            if(isInteger(input_string))
+            inputString = sc.nextLine();
+            if(isInteger(inputString))
                 break;
             else{
                 System.out.println("Enter a digit between 1 and 3");
             }
         }
         try{
-            exp.ExceptionType(Integer.parseInt(input_string));
+            exp.ExceptionType(Integer.parseInt(inputString));
         }
         catch(Exception e)
         {

@@ -1,8 +1,0 @@
-
-S	java:S106"9Replace this use of System.out or System.err by a logger.(§æÝ¼þÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(’œæ€üÿÿÿÿ
-V	java:S125"<This block of commented-out lines of code should be removed.(ÞööÐùÿÿÿÿ
-J
-java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ
-J
-java:S1128"4Remove this unused import 'java.util.regex.Matcher'.(ëÅ›ã
